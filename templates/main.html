@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>Ajax System</title>
+  </head>
+  
+<style>
+  .lists{
+    padding: 4%;
+    border-radius: 20px;
+    border:none;
+    background-color: #ebebeb;
+  }
+  .check{
+    border-color: black;
+  }
+</style>
+<body>
+
+  <h2 class="title">Choose premise type</h2>
+
+  <div class="container mt-2 " >
+    <div class="row justify-content-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-10 col-lg-9 col-xl-10 text-center p-0 mt-3 mb-2">
+            <div class="px-0 pt-4 pb-0 mt-3 mb-3">
+              <form id="form">
+                <ul id="progressbar">
+                  <li class="active" id="step1">
+                    <strong> Choose premise type</strong>
+                  </li>
+                  <li id="step2"> <strong> Choose protection type</strong> </li>
+                  <li id="step3"> <strong> Specific premise futures </strong> </li>
+                  <li id="step4"> <strong>Configure device set </strong> </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-2 " id="section1">
+    <div class="row rows mt-5">
+      <div class="col col-md-20">
+        <div class="card col-lg-20 lists">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <div class="form-check">
+              <div class="row">
+                <div class="col-auto">
+                  <input class="form-check-input mb-5 check" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+                <div class="col-auto">
+                  <label class="form-check-label card-text h3" for="flexRadioDefault1">Apartment</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card col-lg-30 lists">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <div class="form-check">
+              <div class="row">
+                <div class="col-auto">
+                  <input class="form-check-input mb-5 check" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                </div>
+                <div class="col-auto">
+                  <label class="form-check-label card-text h3" for="flexRadioDefault2">House</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col">
+        <div class="card col-lg-30 lists">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <div class="form-check">
+              <div class="row">
+
+                <div class="col-auto">
+                  <input class="form-check-input mb-5 check" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                </div>
+                <div class="col-auto">
+                  <label class="form-check-label card-text h3" for="flexRadioDefault3">Office</label>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card col-lg-25 lists">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <div class="form-check">
+              <div class="row">
+                <div class="col-auto">
+                  <input class="form-check-input mb-5 check" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                </div>
+                <div class="col-auto">
+                  <label class="form-check-label card-text h3" for="flexRadioDefault4">Business</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+      <div class="row mt-3 row justify-content-center">
+        <div class="card col-lg-2 border-0">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="form-check">
+            <div class="row">
+              <button type="button" id="nextButton" class="btn btn-dark"  data-mdb-ripple-init disabled>Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+  </div>
+<div id="section2" class="container mt-2 d-none">
+  <!-- Section 2 content with checkboxes -->
+  <div class="row rows mt-5">
+    <div class="col col-md-20">
+      <div class="card col-lg-20 lists">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="form-check">
+            <div class="row">
+              <div class="col-auto">
+                <input class="form-check-input mb-5 check" type="checkbox" id="inlineCheckbox1">
+              </div>
+              <div class="col-auto">
+                <label class="form-check-label card-text h3" for="inlineCheckbox1">Intrusion Protection</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card col-lg-25 lists">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="form-check">
+            <div class="row">
+              <div class="col-auto">
+                <input class="form-check-input mb-5 check" type="checkbox" id="inlineCheckbox2">
+              </div>
+              <div class="col-auto">
+                <label class="form-check-label card-text h3" for="inlineCheckbox2">Fire Detection</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col">
+      <div class="card col-lg-25 lists">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <div class="form-check">
+            <div class="row">
+              <div class="col-auto">
+                <input class="form-check-input mb-5 check" type="checkbox" id="inlineCheckbox3">
+              </div>
+              <div class="col-auto">
+                <label class="form-check-label card-text h3" for="inlineCheckbox3">Leak Protection</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<script>
+
+</script>
